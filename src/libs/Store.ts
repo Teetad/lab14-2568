@@ -5,13 +5,23 @@ interface MarathonFormState {
   plan: "funrun" | "mini" | "half" | "full";
   gender: "male" | "female";
   email: string;
+  password: string;
+  confirmpassword: string;
+  total: number;
+  havecoupon: boolean;
+  coupon: string;
   // Setters
   setFname: (v: string) => void;
   setLname: (v: string) => void;
   setPlan: (v: MarathonForm["plan"]) => void;
   setGender: (v: MarathonForm["gender"]) => void;
   setEmail: (v: string) => void;
+  setPassword: (v: string) => void;
+  setconfirmPassword: (v: string) => void;
   // Function ชื่อ discountCupon คำนวณ total ตรงนี้
+  discountCupon: () => void;
+  sethavecoupon: (v: boolean) => void;
+  setcoupon: (v: string) => void;
   reset: () => void;
 }
 export type { MarathonFormState }
